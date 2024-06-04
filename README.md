@@ -7,7 +7,9 @@ password - 123
 ============================== How To Use =============================
 
 Install postgresql.
+
 Install STS (Spring Tool Suite).
+
 Install JAVA (Version - 17 or Above )
 
 Step 1 - Create Data Base (NAME - assignmentdb).
