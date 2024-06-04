@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"  th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<section>
+<div class="container mt-5">
+<a type="button" th:href="@{/admin/userRegistrationPage}" class="btn btn-primary">Add User</a>
+<table class="table table-hover mt-5">
+  <thead>
+    <tr>
+      <th scope="col">S. No</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Role</th>
+      <th scope="col">Password BCrypted</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="user, sNo : ${users}">
+      <th scope="row" th:text="${sNo.count}">1</th>
+      <td th:text="${user.name}">Mark</td>
+      <td th:text="${user.email}">Otto</td>
+      <td th:text="${user.role}">@mdo</td>
+      <td th:text="${user.password}">@mdo</td>
+    </tr>
+    
+  </tbody>
+</table>
+</div>
+</section>
+</body>
+</html>
